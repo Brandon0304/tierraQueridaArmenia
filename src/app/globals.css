@@ -1,0 +1,78 @@
+:root {
+  --color-bg: #0d0d0d;
+  --color-text: #e6e6e6;
+
+  /* Sober Accent Colors derived from logo */
+  --neon-red: #ea4c4c;
+  --neon-yellow: #f2c94c;
+  --neon-green: #2ecc71;
+  --pale-yellow: #f9f0c2;
+
+  /* Subtle Glows (Sober approach) */
+  --glow-red: 0 0 8px rgba(234, 76, 76, 0.4);
+  --glow-yellow: 0 0 8px rgba(242, 201, 76, 0.4);
+  --glow-green: 0 0 8px rgba(46, 204, 113, 0.4);
+  --glow-pale: 0 0 8px rgba(249, 240, 194, 0.3);
+
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(234, 76, 76, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 10% 100%, rgba(242, 201, 76, 0.02) 0%, transparent 30%),
+    radial-gradient(circle at 90% 100%, rgba(46, 204, 113, 0.02) 0%, transparent 30%);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base text styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+
+a {
+  font-weight: 500;
+  color: var(--neon-yellow);
+  text-decoration: inherit;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--pale-yellow);
+  text-shadow: var(--glow-yellow);
+}
+
+/* Animations */
+.flicker {
+  /* Removed aggressive flickering for a more professional look */
+  opacity: 1;
+}
