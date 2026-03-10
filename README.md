@@ -61,3 +61,4 @@ Los comandos principales definidos en el `package.json` son:
 * `npm run build`: Construye la versión final optimizada del proyecto, preparándola para cuando se decida subir a un servidor público (Producción).
 * `npm start`: Inicia el servidor en modo de producción una vez ha sido construido con el comando anterior.
 * `npm run lint`: Busca y repara posibles errores en las reglas sintácticas del código.
+
