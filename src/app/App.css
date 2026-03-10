@@ -225,30 +225,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(15, 15, 15, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tier-col:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  border-color: rgba(242, 201, 76, 0.2);
 }
 
 .tier-col-center {
-  transform: translateY(-10px);
+  transform: translateY(-15px);
+  background: rgba(20, 20, 20, 0.8);
+  border-color: rgba(242, 201, 76, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.tier-col-center:hover {
+  transform: translateY(-20px);
 }
 
 .tier-name {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 1.4rem;
   color: #fff;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
 }
 
 .tier-price-box {
-  border: 2px solid var(--neon-yellow);
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
+  background: rgba(242, 201, 76, 0.05);
+  border: 1px solid var(--neon-yellow);
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 1.8rem;
+  font-weight: 800;
+  font-size: 1.6rem;
   color: var(--neon-yellow);
-  box-shadow: 0 0 10px rgba(242, 201, 76, 0.2);
 }
 
 /* Ingredients Box */
@@ -256,13 +274,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 4rem;
-  background: rgba(20, 20, 20, 0.5);
-  gap: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(10px);
+  gap: 1.5rem;
   flex-wrap: wrap;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .ing-title {
@@ -300,33 +320,36 @@
 .section-banner-row {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
-  gap: 1rem;
+  margin-bottom: 2.5rem;
+  gap: 1.5rem;
 }
 
 .banner-title {
   background-color: var(--neon-red);
   color: #fff;
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  padding: 0.6rem 2rem;
+  border-radius: 6px;
   white-space: nowrap;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px rgba(234, 76, 76, 0.3);
 }
 
 .banner-line {
   flex: 1;
-  border-bottom: 2px dashed #444;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
 }
 
 .banner-price {
-  border: 2px solid var(--neon-yellow);
-  border-radius: 8px;
-  padding: 0.3rem 1rem;
+  background: rgba(242, 201, 76, 0.1);
+  border: 1px solid var(--neon-yellow);
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 800;
+  font-size: 1.4rem;
   color: var(--neon-yellow);
 }
 
@@ -405,32 +428,82 @@
 .catalog-legal {
   text-align: center;
   font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
-  color: #555;
-  margin-top: 2rem;
-  border-top: 1px solid #222;
-  padding-top: 1rem;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 3rem 2rem;
-  background-color: #050505;
-  border-top: 1px solid rgba(57, 255, 20, 0.2);
-}
-
-.footer-text {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #888;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
-.footer-sub {
+  font-size: 0.85rem;
   color: #666;
-  font-size: 0.9rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  line-height: 1.8;
+}
+
+/* Professional Footer */
+.footer {
+  background-color: #030303;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4rem 2rem 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: var(--glow-red);
+  margin-bottom: 1rem;
+}
+
+.footer-slogan {
+  color: #888;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-contact-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-heading {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #555;
+  font-size: 0.85rem;
 }

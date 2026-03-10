@@ -121,13 +121,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Simple Footer */}
+      {/* Professional Footer */}
       <footer id="contact" className="footer">
-        <div className="footer-text">Tierra Querida</div>
-        <div className="footer-sub">El mejor sabor siempre te espera.</div>
-        <div className="footer-sub" style={{ marginTop: '0.5rem', color: 'var(--neon-green)' }}>
-          📍 Cra. 14 #15 Norte-39, Armenia, Quindío <br />
-          📞 3006430637
+        <div className="footer-content">
+          <div className="footer-brand-section">
+            <div className="footer-logo">Tierra Querida</div>
+            <p className="footer-slogan">El mejor sabor siempre te espera.</p>
+          </div>
+
+          <div className="footer-contact-section">
+            <h4 className="footer-heading">Contacto y Ubicación</h4>
+            <div className="contact-item">
+              <span className="contact-icon">📍</span> Cra. 14 #15 Norte-39, Armenia, Quindío
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">📞</span> 300 643 0637
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Tierra Querida. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>
