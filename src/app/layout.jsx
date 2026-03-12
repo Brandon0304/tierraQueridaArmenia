@@ -3,6 +3,9 @@ import './globals.css'
 export const metadata = {
     title: 'Tierra Querida - Burgers',
     description: '¡Déjate tentar! El mejor sabor siempre te espera.',
+    icons: {
+        icon: '/images/logoTierraQuerida.webp',
+    },
 }
 
 export default function RootLayout({ children }) {
